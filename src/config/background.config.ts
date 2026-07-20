@@ -4,7 +4,7 @@ export const backgroundImages: BackgroundImage[] = [
   {
     id: 'bg-1',
     src: '/assets/backgrounds/bg-1.jpg',
-    alt: 'Bali Nusa Dua Convention Center - venue utama INCOSAI 2028',
+    alt: 'Way Kambas - venue utama INCOSAI 2028',
     priority: true,
   },
   {

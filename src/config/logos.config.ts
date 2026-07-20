@@ -7,8 +7,8 @@ export const logos: LogoItem[] = [
     src: '/assets/logos/logo-bpk.png',
     alt: 'Logo Badan Pemeriksa Keuangan Republik Indonesia',
     href: 'https://www.bpk.go.id',
-    width: 120,
-    height: 120,
+    width: 170,
+    height: 170,
   },
   {
     id: 'intosai',
@@ -16,8 +16,8 @@ export const logos: LogoItem[] = [
     src: '/assets/logos/logo-intosai.png',
     alt: 'Logo International Organization of Supreme Audit Institutions (INTOSAI)',
     href: 'https://www.intosai.org',
-    width: 120,
-    height: 120,
+    width: 170,
+    height: 170,
   },
   {
     id: 'incosai',
@@ -25,7 +25,7 @@ export const logos: LogoItem[] = [
     src: '/assets/logos/logo-incosai.png',
     alt: 'Logo XXVI INCOSAI 2028',
     href: 'https://incosai2028.id',
-    width: 120,
-    height: 120,
+    width: 170,
+    height: 170,
   },
 ];
