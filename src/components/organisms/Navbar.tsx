@@ -29,12 +29,7 @@ export function Navbar() {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header
-      className={clsx(
-        'fixed top-0 w-full z-50 transition-all duration-300',
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
-      )}
-    >
+    <header className="fixed top-0 w-full z-50 bg-transparent">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo utama - INCOSAI */}
         <div className="flex-shrink-0">
@@ -70,15 +65,15 @@ export function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMobileMenu}
-          className="md:hidden p-2 rounded-md hover:bg-neutral-100 transition-colors"
+          className="md:hidden p-2 rounded-md hover:bg-white/20 transition-colors"
           aria-label="Toggle navigation menu"
           aria-expanded={isMobileMenuOpen}
           aria-controls="mobile-menu"
         >
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6 text-neutral-700" />
+            <X className="h-6 w-6 text-white" />
           ) : (
-            <Menu className="h-6 w-6 text-neutral-700" />
+            <Menu className="h-6 w-6 text-white" />
           )}
         </button>
       </nav>
@@ -92,7 +87,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden bg-white/95 backdrop-blur-md overflow-hidden"
+            className="md:hidden bg-black/80 backdrop-blur-md overflow-hidden"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navItems.map((item) => (

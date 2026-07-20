@@ -14,7 +14,7 @@ export function NavLink({ href, label, onClick, className }: NavLinkProps) {
       href={href}
       onClick={onClick}
       className={clsx(
-        'font-body font-medium text-neutral-700 hover:text-brand-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-primary after:transition-all after:duration-300 hover:after:w-full',
+        'font-body font-medium text-white hover:text-brand-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-primary after:transition-all after:duration-300 hover:after:w-full',
         className
       )}
     >
