@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="skyBali" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a5276"/>
+      <stop offset="15%" stop-color="#2e86c1"/>
+      <stop offset="40%" stop-color="#85c1e9"/>
+      <stop offset="65%" stop-color="#b3e0f7"/>
+      <stop offset="100%" stop-color="#e8f5e9"/>
+    </linearGradient>
+
+    <!-- Sun gradient -->
+    <radialGradient id="sunBali" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="40%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFB300" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Mountain gradients -->
+    <linearGradient id="mountainFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d5a3a"/>
+      <stop offset="100%" stop-color="#2d4a2a"/>
+    </linearGradient>
+    <linearGradient id="mountainMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7c3f"/>
+      <stop offset="100%" stop-color="#3a6c2f"/>
+    </linearGradient>
+
+    <!-- Rice terrace gradients -->
+    <linearGradient id="rice1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7cb342"/>
+      <stop offset="100%" stop-color="#558b2f"/>
+    </linearGradient>
+    <linearGradient id="rice2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66bb6a"/>
+      <stop offset="100%" stop-color="#388e3c"/>
+    </linearGradient>
+    <linearGradient id="rice3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#81c784"/>
+      <stop offset="100%" stop-color="#4caf50"/>
+    </linearGradient>
+
+    <!-- Ocean gradient -->
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1565C0"/>
+      <stop offset="30%" stop-color="#1976D2"/>
+      <stop offset="70%" stop-color="#42A5F5"/>
+      <stop offset="100%" stop-color="#64B5F6"/>
+    </linearGradient>
+
+    <!-- Cloud gradient -->
+    <radialGradient id="cloud" cx="30%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.3"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="blurBali">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blurBaliLight">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="900" fill="url(#skyBali)"/>
+
+  <!-- Sun -->
+  <circle cx="550" cy="100" r="130" fill="url(#sunBali)"/>
+  <circle cx="550" cy="100" r="30" fill="#FFF9C4"/>
+  <circle cx="550" cy="100" r="25" fill="#FFEB3B"/>
+
+  <!-- Clouds -->
+  <g opacity="0.6">
+    <ellipse cx="450" cy="60" rx="100" ry="35" fill="url(#cloud)"/>
+    <ellipse cx="520" cy="55" rx="80" ry="28" fill="url(#cloud)"/>
+    <ellipse cx="380" cy="70" rx="70" ry="25" fill="url(#cloud)"/>
+    <ellipse cx="150" cy="80" rx="90" ry="30" fill="url(#cloud)"/>
+    <ellipse cx="220" cy="75" rx="70" ry="25" fill="url(#cloud)"/>
+    <ellipse cx="80" cy="90" rx="60" ry="22" fill="url(#cloud)"/>
+    <ellipse cx="250" cy="100" rx="80" ry="28" fill="url(#cloud)"/>
+    <ellipse cx="650" cy="80" rx="70" ry="25" fill="url(#cloud)"/>
+    <ellipse cx="720" cy="95" rx="60" ry="22" fill="url(#cloud)"/>
+  </g>
+
+  <!-- Far mountains -->
+  <path d="M0 350 Q80 280 180 340 Q280 290 380 330 Q480 270 580 310 Q680 260 760 320 L800 340 L800 520 L0 520Z" fill="url(#mountainFar)" opacity="0.4" filter="url(#blurBali)"/>
+
+  <!-- Gunung Agung / mountain -->
+  <path d="M300 380 Q380 260 460 380 Q480 300 540 370 Q580 320 640 380 L640 520 L300 520Z" fill="url(#mountainMid)" opacity="0.55"/>
+  <!-- Mountain snow cap -->
+  <path d="M380 310 Q420 265 460 310 Q450 290 420 280 Q400 290 380 310Z" fill="white" opacity="0.4"/>
+  <path d="M390 300 Q420 268 450 300 Q440 285 420 278 Q400 285 390 300Z" fill="white" opacity="0.25"/>
+
+  <!-- Mid mountains -->
+  <path d="M0 400 Q80 340 180 390 Q280 350 380 400 Q480 360 580 400 Q680 350 780 390 L800 400 L800 560 L0 560Z" fill="#4a7c3f" opacity="0.45" filter="url(#blurBaliLight)"/>
+  <path d="M0 430 Q100 380 200 420 Q300 390 400 430 Q500 400 600 430 Q700 390 800 420 L800 570 L0 570Z" fill="#3a6c2f" opacity="0.4" filter="url(#blurBaliLight)"/>
+
+  <!-- ============ RICE TERRACES ============ -->
+  <!-- Level 1 - highest -->
+  <path d="M0 470 Q100 450 200 470 Q300 460 400 475 Q500 465 600 475 Q700 460 800 470 L800 510 L0 510Z" fill="url(#rice1)" opacity="0.7"/>
+  <!-- Level 2 -->
+  <path d="M0 505 Q100 490 200 505 Q300 495 400 510 Q500 500 600 510 Q700 495 800 505 L800 545 L0 545Z" fill="url(#rice2)" opacity="0.7"/>
+  <!-- Level 3 -->
+  <path d="M0 540 Q100 525 200 540 Q300 530 400 545 Q500 535 600 545 Q700 530 800 540 L800 580 L0 580Z" fill="url(#rice3)" opacity="0.7"/>
+  <!-- Level 4 -->
+  <path d="M0 575 Q100 560 200 575 Q300 565 400 580 Q500 570 600 580 Q700 565 800 575 L800 615 L0 615Z" fill="url(#rice1)" opacity="0.7"/>
+  <!-- Level 5 -->
+  <path d="M0 610 Q100 595 200 610 Q300 600 400 615 Q500 605 600 615 Q700 600 800 610 L800 650 L0 650Z" fill="url(#rice2)" opacity="0.65"/>
+  <!-- Level 6 -->
+  <path d="M0 645 Q100 630 200 645 Q300 635 400 650 Q500 640 600 650 Q700 635 800 645 L800 685 L0 685Z" fill="url(#rice3)" opacity="0.6"/>
+
+  <!-- Terrace edge lines -->
+  <g opacity="0.2" stroke="#1b5e20" stroke-width="1.5" fill="none">
+    <path d="M0 470 Q100 450 200 470 Q300 460 400 475 Q500 465 600 475 Q700 460 800 470"/>
+    <path d="M0 505 Q100 490 200 505 Q300 495 400 510 Q500 500 600 510 Q700 495 800 505"/>
+    <path d="M0 540 Q100 525 200 540 Q300 530 400 545 Q500 535 600 545 Q700 530 800 540"/>
+    <path d="M0 575 Q100 560 200 575 Q300 565 400 580 Q500 570 600 580 Q700 565 800 575"/>
+    <path d="M0 610 Q100 595 200 610 Q300 600 400 615 Q500 605 600 615 Q700 600 800 610"/>
+    <path d="M0 645 Q100 630 200 645 Q300 635 400 650 Q500 640 600 650 Q700 635 800 645"/>
+  </g>
+
+  <!-- Water reflection on rice fields -->
+  <g opacity="0.08" fill="white">
+    <ellipse cx="150" cy="490" rx="40" ry="5"/>
+    <ellipse cx="350" cy="530" rx="50" ry="6"/>
+    <ellipse cx="550" cy="500" rx="35" ry="4"/>
+    <ellipse cx="250" cy="570" rx="45" ry="5"/>
+    <ellipse cx="650" cy="600" rx="40" ry="5"/>
+  </g>
+
+  <!-- ============ OCEAN ============ -->
+  <rect x="0" y="680" width="800" height="220" fill="url(#ocean)"/>
+
+  <!-- Waves -->
+  <g opacity="0.15" fill="white">
+    <path d="M0 685 Q50 678 100 685 Q150 692 200 685 Q250 678 300 685 Q350 692 400 685 Q450 678 500 685 Q550 692 600 685 Q650 678 700 685 Q750 692 800 685 L800 700 L0 700Z"/>
+    <path d="M0 710 Q50 703 100 710 Q150 717 200 710 Q250 703 300 710 Q350 717 400 710 Q450 703 500 710 Q550 717 600 710 Q650 703 700 710 Q750 717 800 710 L800 725 L0 725Z"/>
+    <path d="M0 740 Q50 733 100 740 Q150 747 200 740 Q250 733 300 740 Q350 747 400 740 Q450 733 500 740 Q550 747 600 740 Q650 733 700 740 Q750 747 800 740 L800 755 L0 755Z"/>
+  </g>
+
+  <!-- Wave shine -->
+  <g opacity="0.05" fill="white">
+    <path d="M100 690 Q110 687 120 690 Q130 687 140 690"/>
+    <path d="M300 700 Q310 697 320 700 Q330 697 340 700"/>
+    <path d="M500 715 Q510 712 520 715 Q530 712 540 715"/>
+    <path d="M200 730 Q210 727 220 730 Q230 727 240 730"/>
+    <path d="M600 725 Q610 722 620 725 Q630 722 640 725"/>
+  </g>
+
+  <!-- ============ PURA / TEMPLE ============ -->
+  <!-- Main temple (Pura) -->
+  <g transform="translate(280, 410)" opacity="0.45">
+    <!-- Base -->
+    <rect x="0" y="50" width="120" height="40" fill="#5d4037"/>
+    <rect x="0" y="50" width="120" height="8" fill="#795548"/>
+    <!-- Split gate (Candi Bentar) -->
+    <rect x="10" y="10" width="35" height="45" fill="#6d4c41"/>
+    <rect x="75" y="10" width="35" height="45" fill="#6d4c41"/>
+    <!-- Gate steps -->
+    <path d="M45 35 L45 10 L55 10 L55 35" fill="none"/>
+    <path d="M65 35 L65 10 L75 10 L75 35" fill="none"/>
+    <!-- Decorative top -->
+    <polygon points="5,10 27,-5 50,10" fill="#8d6e63"/>
+    <polygon points="70,10 92,-5 115,10" fill="#8d6e63"/>
+    <!-- Gate ornament -->
+    <circle cx="27" cy="18" r="4" fill="#c9a227" opacity="0.5"/>
+    <circle cx="92" cy="18" r="4" fill="#c9a227" opacity="0.5"/>
+    <!-- Stone texture -->
+    <rect x="5" y="55" width="110" height="3" fill="#4e342e" opacity="0.3"/>
+    <rect x="5" y="62" width="110" height="2" fill="#4e342e" opacity="0.3"/>
+    <rect x="5" y="70" width="110" height="2" fill="#4e342e" opacity="0.3"/>
+    <rect x="5" y="78" width="110" height="2" fill="#4e342e" opacity="0.3"/>
+  </g>
+
+  <!-- Smaller temple -->
+  <g transform="translate(500, 430)" opacity="0.4">
+    <rect x="5" y="35" width="70" height="25" fill="#5d4037"/>
+    <rect x="15" y="5" width="20" height="30" fill="#6d4c41"/>
+    <rect x="45" y="5" width="20" height="30" fill="#6d4c41"/>
+    <polygon points="10,5 25,-8 40,5" fill="#8d6e63"/>
+    <polygon points="40,5 55,-8 70,5" fill="#8d6e63"/>
+    <circle cx="25" cy="15" r="3" fill="#c9a227" opacity="0.4"/>
+    <circle cx="55" cy="15" r="3" fill="#c9a227" opacity="0.4"/>
+  </g>
+
+  <!-- Small shrine -->
+  <g transform="translate(420, 450)" opacity="0.3">
+    <rect x="5" y="20" width="30" height="15" fill="#5d4037"/>
+    <polygon points="0,20 20,2 40,20" fill="#6d4c41"/>
+    <circle cx="20" cy="12" r="2" fill="#c9a227" opacity="0.5"/>
+  </g>
+
+  <!-- ============ COCONUT PALM TREES ============ -->
+  <g transform="translate(80, 430)" opacity="0.5">
+    <!-- Trunk -->
+    <path d="M15 40 Q10 20 15 0" stroke="#5d4037" stroke-width="6" fill="none"/>
+    <path d="M15 40 Q10 20 15 0" stroke="#6d4c41" stroke-width="3" fill="none" opacity="0.3"/>
+    <!-- Fronds -->
+    <path d="M15 0 Q-5 -15 -20 -10" stroke="#2e7d32" stroke-width="2" fill="none"/>
+    <path d="M15 0 Q0 -20 -10 -25" stroke="#388e3c" stroke-width="2" fill="none"/>
+    <path d="M15 0 Q15 -25 10 -30" stroke="#2e7d32" stroke-width="2" fill="none"/>
+    <path d="M15 0 Q30 -25 40 -20" stroke="#388e3c" stroke-width="2" fill="none"/>
+    <path d="M15 0 Q35 -15 45 -5" stroke="#2e7d32" stroke-width="2" fill="none"/>
+    <!-- Coconuts -->
+    <circle cx="12" cy="2" r="3" fill="#4e342e"/>
+    <circle cx="18" cy="0" r="3" fill="#5d4037"/>
+  </g>
+
+  <g transform="translate(600, 440)" opacity="0.45">
+    <path d="M12 35 Q8 18 12 0" stroke="#5d4037" stroke-width="5" fill="none"/>
+    <path d="M12 0 Q-5 -12 -18 -8" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+    <path d="M12 0 Q0 -18 -8 -22" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+    <path d="M12 0 Q12 -22 8 -27" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+    <path d="M12 0 Q25 -22 35 -18" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+    <path d="M12 0 Q28 -12 38 -5" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+    <circle cx="9" cy="2" r="2.5" fill="#4e342e"/>
+    <circle cx="15" cy="0" r="2.5" fill="#5d4037"/>
+  </g>
+
+  <g transform="translate(700, 455)" opacity="0.35">
+    <path d="M10 30 Q7 15 10 0" stroke="#5d4037" stroke-width="4" fill="none"/>
+    <path d="M10 0 Q-3 -10 -12 -7" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+    <path d="M10 0 Q0 -15 -5 -18" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+    <path d="M10 0 Q10 -18 7 -22" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+    <path d="M10 0 Q22 -18 28 -14" stroke="#388e3c" stroke-width="1.5" fill="none"/>
+    <circle cx="8" cy="1" r="2" fill="#4e342e"/>
+    <circle cx="13" cy="0" r="2" fill="#5d4037"/>
+  </g>
+
+  <!-- Tropical flowers (bougainvillea) -->
+  <g opacity="0.25">
+    <circle cx="100" cy="440" r="4" fill="#e91e63"/>
+    <circle cx="105" cy="437" r="3.5" fill="#f06292"/>
+    <circle cx="98" cy="435" r="3" fill="#ec407a"/>
+    <circle cx="102" cy="442" r="3" fill="#f48fb1"/>
+    <circle cx="108" cy="440" r="3" fill="#e91e63" opacity="0.7"/>
+  </g>
+  <g opacity="0.2">
+    <circle cx="620" cy="450" r="3.5" fill="#ff5722"/>
+    <circle cx="625" cy="448" r="3" fill="#ff7043"/>
+    <circle cx="618" cy="445" r="3" fill="#ff8a65"/>
+    <circle cx="623" cy="452" r="2.5" fill="#ffab91"/>
+  </g>
+
+  <!-- Birds -->
+  <g stroke="#2c3e50" stroke-width="1.2" fill="none" opacity="0.3">
+    <path d="M300 140 Q305 134 310 140 Q315 134 320 140"/>
+    <path d="M340 125 Q345 119 350 125 Q355 119 360 125"/>
+    <path d="M280 150 Q285 144 290 150 Q295 144 300 150"/>
+    <path d="M370 135 Q375 129 380 135 Q385 129 390 135"/>
+  </g>
+
+  <!-- Ocean depth gradient -->
+  <g opacity="0.08">
+    <rect x="0" y="680" width="800" height="10" fill="#000" opacity="0.1"/>
+    <rect x="0" y="780" width="800" height="20" fill="#000" opacity="0.05"/>
+  </g>
+
+  <!-- Sandy beach hint -->
+  <path d="M0 690 Q100 680 200 690 Q300 685 400 690 Q500 688 600 690 Q700 685 800 690 L800 700 L0 700Z" fill="#e8d5b7" opacity="0.06"/>
+
+  <!-- Decorative text -->
+  <g transform="translate(400, 860)" text-anchor="middle" opacity="0.1">
+    <text font-family="Georgia, serif" font-size="14" fill="#0d47a1" letter-spacing="10">BALI · INDONESIA</text>
+  </g>
+
+  <!-- Subtle ornamental corner -->
+  <g opacity="0.06">
+    <path d="M0 0 L0 50 Q25 25 50 0Z" fill="#1565C0"/>
+    <path d="M800 0 L800 50 Q775 25 750 0Z" fill="#1565C0"/>
+    <path d="M0 900 L0 850 Q25 875 50 900Z" fill="#1565C0"/>
+    <path d="M800 900 L800 850 Q775 875 750 900Z" fill="#1565C0"/>
+  </g>
+</svg>

@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <defs>
+    <!-- Sky gradient - sunrise -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a90d9"/>
+      <stop offset="20%" stop-color="#87CEEB"/>
+      <stop offset="40%" stop-color="#f5a623"/>
+      <stop offset="55%" stop-color="#f7dc6f"/>
+      <stop offset="70%" stop-color="#f0e6d3"/>
+      <stop offset="100%" stop-color="#e8d5b7"/>
+    </linearGradient>
+
+    <!-- Mountain gradients -->
+    <linearGradient id="mtFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7d51"/>
+      <stop offset="100%" stop-color="#3d6b35"/>
+    </linearGradient>
+    <linearGradient id="mtMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7c3f"/>
+      <stop offset="100%" stop-color="#2d5a27"/>
+    </linearGradient>
+
+    <!-- Ground gradient -->
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a8a4a"/>
+      <stop offset="40%" stop-color="#4a7a3a"/>
+      <stop offset="100%" stop-color="#3a6a2a"/>
+    </linearGradient>
+
+    <!-- Elephant body gradient -->
+    <radialGradient id="elephantBody" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#6a6a6a"/>
+      <stop offset="50%" stop-color="#4d4d4d"/>
+      <stop offset="100%" stop-color="#3a3a3a"/>
+    </radialGradient>
+
+    <!-- Sun glow -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff7b0" stop-opacity="0.8"/>
+      <stop offset="30%" stop-color="#f5d442" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f5a623" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filter for depth -->
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="5" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Tapis pattern -->
+    <pattern id="tapis" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none"/>
+      <path d="M0 20 L20 0 L40 20 L20 40Z" stroke="#c9a227" stroke-width="0.8" fill="none" opacity="0.2"/>
+      <path d="M0 0 L10 10 L20 0 L30 10 L40 0" stroke="#c9a227" stroke-width="0.5" fill="none" opacity="0.12"/>
+      <path d="M0 40 L10 30 L20 40 L30 30 L40 40" stroke="#c9a227" stroke-width="0.5" fill="none" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="900" fill="url(#sky)"/>
+
+  <!-- Sun -->
+  <circle cx="300" cy="140" r="100" fill="url(#sunGlow)"/>
+  <circle cx="300" cy="140" r="35" fill="#FFEAA7"/>
+  <circle cx="300" cy="140" r="30" fill="#FFD93D"/>
+
+  <!-- Clouds -->
+  <g opacity="0.5" fill="white" filter="url(#blur1)">
+    <ellipse cx="100" cy="80" rx="90" ry="30"/>
+    <ellipse cx="160" cy="70" rx="70" ry="25"/>
+    <ellipse cx="50" cy="90" rx="60" ry="20"/>
+    <ellipse cx="550" cy="100" rx="100" ry="32"/>
+    <ellipse cx="620" cy="90" rx="80" ry="28"/>
+    <ellipse cx="480" cy="110" rx="60" ry="22"/>
+    <ellipse cx="700" cy="120" rx="70" ry="25"/>
+  </g>
+
+  <!-- Far mountains -->
+  <path d="M0 380 L80 280 L160 340 L250 260 L340 330 L420 250 L500 320 L580 270 L660 340 L740 280 L800 350 L800 500 L0 500Z" fill="url(#mtFar)" opacity="0.5" filter="url(#blur1)"/>
+  <path d="M0 400 L60 320 L140 370 L200 300 L300 360 L380 290 L460 350 L540 310 L620 370 L700 320 L800 380 L800 520 L0 520Z" fill="#3d6b35" opacity="0.35" filter="url(#blur1)"/>
+
+  <!-- Mid mountains -->
+  <path d="M0 430 L50 360 L120 410 L190 340 L280 400 L360 330 L440 390 L530 350 L610 410 L690 360 L770 400 L800 420 L800 550 L0 550Z" fill="url(#mtMid)" opacity="0.6"/>
+  <path d="M0 450 L100 390 L180 440 L250 380 L340 430 L420 370 L500 420 L580 380 L660 440 L740 400 L800 450 L800 580 L0 580Z" fill="#2d5a27" opacity="0.4"/>
+
+  <!-- Ground / forest area -->
+  <rect x="0" y="480" width="800" height="420" fill="url(#ground)"/>
+
+  <!-- Forest tree line -->
+  <g opacity="0.6">
+    <ellipse cx="50" cy="490" rx="40" ry="50" fill="#2d5a27"/>
+    <ellipse cx="130" cy="485" rx="35" ry="45" fill="#3a6a2a"/>
+    <ellipse cx="210" cy="490" rx="45" ry="55" fill="#2d5a27"/>
+    <ellipse cx="680" cy="488" rx="40" ry="48" fill="#3a6a2a"/>
+    <ellipse cx="740" cy="492" rx="35" ry="42" fill="#2d5a27"/>
+    <ellipse cx="780" cy="485" rx="30" ry="38" fill="#3a6a2a"/>
+  </g>
+
+  <!-- Individual trees -->
+  <g transform="translate(580, 470)" opacity="0.7">
+    <rect x="12" y="30" width="10" height="40" fill="#5c4033"/>
+    <ellipse cx="17" cy="20" rx="30" ry="35" fill="#2d5a27"/>
+    <ellipse cx="17" cy="15" rx="22" ry="25" fill="#3a7a2f"/>
+  </g>
+  <g transform="translate(640, 480)" opacity="0.6">
+    <rect x="10" y="25" width="8" height="35" fill="#5c4033"/>
+    <ellipse cx="14" cy="18" rx="25" ry="30" fill="#2d5a27"/>
+    <ellipse cx="14" cy="14" rx="18" ry="20" fill="#3a7a2f"/>
+  </g>
+  <g transform="translate(30, 475)" opacity="0.6">
+    <rect x="10" y="28" width="8" height="35" fill="#5c4033"/>
+    <ellipse cx="14" cy="18" rx="25" ry="30" fill="#2d5a27"/>
+  </g>
+
+  <!-- Grass texture -->
+  <g opacity="0.25" stroke="#4a8a3a" stroke-width="1" fill="none">
+    <path d="M20 530 Q25 510 30 530"/>
+    <path d="M80 550 Q85 530 90 550"/>
+    <path d="M150 540 Q155 520 160 540"/>
+    <path d="M250 560 Q255 540 260 560"/>
+    <path d="M350 535 Q355 515 360 535"/>
+    <path d="M450 555 Q455 535 460 555"/>
+    <path d="M550 545 Q555 525 560 545"/>
+    <path d="M650 560 Q655 540 660 560"/>
+    <path d="M750 545 Q755 525 760 545"/>
+    <path d="M120 570 Q125 550 130 570"/>
+    <path d="M300 580 Q305 560 310 580"/>
+    <path d="M500 575 Q505 555 510 575"/>
+    <path d="M700 585 Q705 565 710 585"/>
+  </g>
+
+  <!-- Tapis ornamental border top -->
+  <g opacity="0.5">
+    <rect x="0" y="0" width="800" height="6" fill="#c9a227"/>
+    <rect x="0" y="6" width="800" height="20" fill="url(#tapis)"/>
+    <rect x="0" y="26" width="800" height="3" fill="#c9a227" opacity="0.4"/>
+  </g>
+
+  <!-- Tapis ornamental border bottom -->
+  <g opacity="0.5">
+    <rect x="0" y="874" width="800" height="3" fill="#c9a227" opacity="0.4"/>
+    <rect x="0" y="877" width="800" height="20" fill="url(#tapis)"/>
+    <rect x="0" y="897" width="800" height="3" fill="#c9a227"/>
+  </g>
+
+  <!-- Tapis pattern on ground overlay -->
+  <rect x="0" y="550" width="800" height="350" fill="url(#tapis)" opacity="0.15"/>
+
+  <!-- ============ BIG ELEPHANT ============ -->
+  <g transform="translate(200, 320)" filter="url(#shadow)">
+    <!-- Elephant shadow on ground -->
+    <ellipse cx="80" cy="250" rx="120" ry="20" fill="#000" opacity="0.15"/>
+
+    <!-- Back legs -->
+    <rect x="15" y="180" width="32" height="65" rx="10" fill="#3a3a3a"/>
+    <rect x="115" y="180" width="32" height="65" rx="10" fill="#3a3a3a"/>
+
+    <!-- Body -->
+    <ellipse cx="80" cy="125" rx="95" ry="70" fill="url(#elephantBody)"/>
+    <ellipse cx="80" cy="120" rx="85" ry="55" fill="#5a5a5a" opacity="0.15"/>
+
+    <!-- Head -->
+    <ellipse cx="-35" cy="95" rx="65" ry="60" fill="#4d4d4d"/>
+    <ellipse cx="-35" cy="90" rx="60" ry="55" fill="#5a5a5a" opacity="0.2"/>
+
+    <!-- Forehead dome -->
+    <ellipse cx="-30" cy="65" rx="38" ry="32" fill="#555"/>
+
+    <!-- Ears -->
+    <ellipse cx="-80" cy="90" rx="38" ry="48" fill="#3d3d3d" transform="rotate(-8, -80, 90)"/>
+    <ellipse cx="-80" cy="90" rx="28" ry="38" fill="#5a5a5a" transform="rotate(-8, -80, 90)" opacity="0.25"/>
+
+    <!-- Trunk -->
+    <path d="M-75 115 Q-100 145 -95 180 Q-90 210 -75 200 Q-62 195 -68 175 Q-72 160 -55 135" fill="#4d4d4d" stroke="#3a3a3a" stroke-width="1"/>
+    <path d="M-75 115 Q-95 140 -92 170 Q-88 195 -76 192" fill="#5a5a5a" opacity="0.2"/>
+
+    <!-- Eyes -->
+    <ellipse cx="-50" cy="85" rx="7" ry="8" fill="#1a1a1a"/>
+    <ellipse cx="-48" cy="82" rx="2.5" ry="2" fill="white" opacity="0.4"/>
+
+    <!-- Wrinkle around eye -->
+    <path d="M-58 82 Q-50 78 -42 82" stroke="#3a3a3a" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+    <!-- Tusks -->
+    <path d="M-60 112 Q-65 140 -55 160" stroke="#f5f0dc" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M-45 112 Q-50 138 -40 155" stroke="#f5f0dc" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Tusk detail -->
+    <path d="M-60 112 Q-65 140 -55 160" stroke="#fff8dc" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4"/>
+    <path d="M-45 112 Q-50 138 -40 155" stroke="#fff8dc" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Mouth -->
+    <path d="M-72 118 Q-50 122 -38 118" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+
+    <!-- Front legs -->
+    <rect x="10" y="185" width="34" height="65" rx="10" fill="#4a4a4a"/>
+    <rect x="118" y="185" width="34" height="65" rx="10" fill="#4a4a4a"/>
+
+    <!-- Toenails -->
+    <ellipse cx="18" cy="248" rx="5" ry="3.5" fill="#ccc"/>
+    <ellipse cx="30" cy="248" rx="5" ry="3.5" fill="#ccc"/>
+    <ellipse cx="125" cy="248" rx="5" ry="3.5" fill="#ccc"/>
+    <ellipse cx="138" cy="248" rx="5" ry="3.5" fill="#ccc"/>
+    <ellipse cx="22" cy="243" rx="5" ry="3.5" fill="#bbb"/>
+    <ellipse cx="132" cy="243" rx="5" ry="3.5" fill="#bbb"/>
+
+    <!-- Tail -->
+    <path d="M175 115 Q200 105 210 95 Q215 88 210 98" stroke="#4a4a4a" stroke-width="4" fill="none"/>
+    <path d="M210 95 Q215 85 220 90 Q217 96 212 99" stroke="#3a3a3a" stroke-width="2.5" fill="none"/>
+
+    <!-- Body wrinkles -->
+    <path d="M25 140 Q45 148 65 140" stroke="#3a3a3a" stroke-width="0.8" fill="none" opacity="0.3"/>
+    <path d="M75 140 Q95 148 115 140" stroke="#3a3a3a" stroke-width="0.8" fill="none" opacity="0.3"/>
+    <path d="M125 135 Q140 140 155 132" stroke="#3a3a3a" stroke-width="0.8" fill="none" opacity="0.25"/>
+
+    <!-- Body highlight -->
+    <ellipse cx="70" cy="108" rx="45" ry="25" fill="#7a7a7a" opacity="0.08"/>
+  </g>
+
+  <!-- Traditional house (Lamban) -->
+  <g transform="translate(520, 430)" opacity="0.55">
+    <!-- Stilts -->
+    <rect x="15" y="50" width="6" height="30" fill="#6b3410"/>
+    <rect x="50" y="50" width="6" height="30" fill="#6b3410"/>
+    <rect x="85" y="50" width="6" height="30" fill="#6b3410"/>
+    <!-- House body -->
+    <rect x="5" y="25" width="95" height="30" fill="#8b5a2b"/>
+    <!-- Roof -->
+    <polygon points="-5,25 52,-8 110,25" fill="#a0522d"/>
+    <polygon points="-5,25 52,-8 110,25" fill="#c07030" opacity="0.2"/>
+    <!-- Roof decoration -->
+    <path d="M47 -8 Q52 -18 57 -8" fill="none" stroke="#c9a227" stroke-width="1.5"/>
+    <!-- Windows -->
+    <rect x="15" y="30" width="12" height="12" fill="#2a1508" rx="1"/>
+    <rect x="35" y="30" width="12" height="12" fill="#2a1508" rx="1"/>
+    <rect x="55" y="30" width="12" height="12" fill="#2a1508" rx="1"/>
+    <rect x="75" y="30" width="12" height="12" fill="#2a1508" rx="1"/>
+  </g>
+
+  <!-- Second smaller house -->
+  <g transform="translate(470, 450)" opacity="0.4">
+    <rect x="10" y="35" width="6" height="20" fill="#6b3410"/>
+    <rect x="40" y="35" width="6" height="20" fill="#6b3410"/>
+    <rect x="4" y="18" width="50" height="20" fill="#8b5a2b"/>
+    <polygon points="0,18 29,-5 58,18" fill="#a0522d"/>
+    <rect x="12" y="22" width="10" height="8" fill="#2a1508" rx="1"/>
+    <rect x="32" y="22" width="10" height="8" fill="#2a1508" rx="1"/>
+  </g>
+
+  <!-- Siger (traditional crown) ornament -->
+  <g transform="translate(350, 200)" opacity="0.18">
+    <path d="M0 0 Q15 -25 30 0 L30 40 L0 40Z" fill="#c9a227"/>
+    <path d="M30 0 Q45 -25 60 0 L60 40 L30 40Z" fill="#b8961e"/>
+    <path d="M60 0 Q75 -25 90 0 L90 40 L60 40Z" fill="#c9a227"/>
+    <path d="M13 -5 L15 -15 L20 -15 L18 -5" fill="#c9a227"/>
+    <path d="M43 -5 L45 -15 L50 -15 L48 -5" fill="#c9a227"/>
+    <path d="M73 -5 L75 -15 L80 -15 L78 -5" fill="#c9a227"/>
+    <path d="M28 -8 L30 -20 L35 -20 L33 -8" fill="#f4d03f"/>
+    <path d="M58 -8 L60 -20 L65 -20 L63 -8" fill="#f4d03f"/>
+  </g>
+
+  <!-- Birds -->
+  <g stroke="#3a3a3a" stroke-width="1.5" fill="none" opacity="0.35">
+    <path d="M450 170 Q455 163 460 170 Q465 163 470 170"/>
+    <path d="M480 155 Q485 148 490 155 Q495 148 500 155"/>
+    <path d="M520 165 Q525 158 530 165 Q535 158 540 165"/>
+    <path d="M440 185 Q445 178 450 185 Q455 178 460 185"/>
+  </g>
+
+  <!-- Ground decorative lines -->
+  <g opacity="0.1" fill="none" stroke="#c9a227" stroke-width="1">
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="650" x2="800" y2="650"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+    <line x1="0" y1="750" x2="800" y2="750"/>
+    <line x1="0" y1="800" x2="800" y2="800"/>
+    <line x1="0" y1="840" x2="800" y2="840"/>
+  </g>
+
+  <!-- Water buffalo (kerbau) - small -->
+  <g transform="translate(90, 530)" opacity="0.35">
+    <ellipse cx="20" cy="15" rx="18" ry="10" fill="#4a4a4a"/>
+    <ellipse cx="2" cy="12" rx="10" ry="8" fill="#4a4a4a"/>
+    <path d="M-4 5 L-6 0 L-2 3" stroke="#4a4a4a" stroke-width="1.5" fill="none"/>
+    <path d="M-1 5 L1 0 L5 3" stroke="#4a4a4a" stroke-width="1.5" fill="none"/>
+    <line x1="2" y1="23" x2="2" y2="32" stroke="#4a4a4a" stroke-width="2"/>
+    <line x1="15" y1="23" x2="15" y2="32" stroke="#4a4a4a" stroke-width="2"/>
+    <line x1="30" y1="23" x2="30" y2="32" stroke="#4a4a4a" stroke-width="2"/>
+    <line x1="38" y1="23" x2="38" y2="32" stroke="#4a4a4a" stroke-width="2"/>
+  </g>
+
+  <!-- Decorative text -->
+  <g transform="translate(400, 865)" text-anchor="middle" opacity="0.12">
+    <text font-family="Georgia, serif" font-size="14" fill="#c9a227" letter-spacing="10">WAY KAMBAS · LAMPUNG</text>
+  </g>
+</svg>

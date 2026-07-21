@@ -15,10 +15,10 @@ export function CountdownDigit({ value, label, className }: CountdownDigitProps)
       aria-label={`${value} ${label} remaining`}
       role="timer"
     >
-      <span className="text-4xl md:text-6xl font-heading font-bold text-brand-primary tabular-nums leading-none">
+      <span className="text-4xl md:text-6xl font-heading font-bold text-brand-primary tabular-nums leading-none drop-shadow-sm">
         {formattedValue}
       </span>
-      <span className="text-xs md:text-sm uppercase tracking-wide text-neutral-600 mt-1">
+      <span className="text-xs md:text-sm uppercase tracking-wide text-brand-primary/80 mt-1 drop-shadow-sm">
         {label}
       </span>
     </div>

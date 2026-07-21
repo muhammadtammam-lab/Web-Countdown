@@ -26,14 +26,16 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div variants={fadeInUp}>
-          <Heading as="h1" className="text-4xl md:text-6xl lg:text-7xl">
-            {siteConfig.eventName}
+          <Heading as="h1" className="text-4xl md:text-6xl lg:text-7xl leading-tight drop-shadow-md">
+            <span className="block">BPK IS</span>
+            <span className="block">READY TO HOST</span>
+            <span className="block">THE XXVI INCOSAI IN BALI</span>
           </Heading>
         </motion.div>
 
         <motion.p
           variants={fadeInUp}
-          className="text-lg md:text-xl text-neutral-700 font-body max-w-2xl"
+          className="text-lg md:text-xl text-brand-primary/80 font-body max-w-2xl"
         >
           {siteConfig.eventTagline}
           {' '}

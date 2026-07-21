@@ -1,5 +1,4 @@
-// TODO: Mode 'slideshow' dapat ditambahkan di masa depan untuk rotasi background
-// Saat ini hanya mendukung mode 'static' (ambil gambar priority pertama)
+// Single background: Full screen SVG background
 import Image from 'next/image';
 import { backgroundImages } from '@/config/background.config';
 
@@ -8,9 +7,7 @@ export interface HeroBackgroundProps {
 }
 
 export function HeroBackground({ className }: HeroBackgroundProps) {
-  // Ambil gambar dengan priority:true, fallback ke index 0
-  const primaryImage =
-    backgroundImages.find((img) => img.priority) ?? backgroundImages[0];
+  const primaryImage = backgroundImages.find((img) => img.priority) ?? backgroundImages[0];
 
   if (!primaryImage) {
     return null;
@@ -29,6 +26,8 @@ export function HeroBackground({ className }: HeroBackgroundProps) {
         sizes="100vw"
         className="object-cover object-center"
       />
+      {/* White overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/50 to-white/30" />
     </div>
   );
 }

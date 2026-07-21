@@ -4,10 +4,10 @@ export const siteConfig: SiteConfig = {
   siteName: 'XXVI INCOSAI Indonesia 2028',
   eventName: 'XXVI INCOSAI',
   eventTagline: 'International Congress of Supreme Audit Institutions',
-  eventDate: '2028-10-01T09:00:00+08:00',
+  eventDate: '2028-10-09T09:00:00+08:00',
   eventLocation: 'Bali Nusa Dua Convention Center (BNDCC), Indonesia',
   seo: {
-    title: 'XXVI INCOSAI 2028 - International Congress of Supreme Audit Institutions',
+    title: 'BPK IS READY TO HOST THE XXVI INCOSAI IN BALI',
     description:
       'The XXVI INCOSAI 2028 in Bali, Indonesia. International Congress of Supreme Audit Institutions hosted by BPK RI.',
     keywords: [

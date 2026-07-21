@@ -14,7 +14,7 @@ export function CountdownUnit({ targetDate, className }: CountdownUnitProps) {
 
   if (isExpired) {
     return (
-      <p className="text-2xl font-heading text-brand-primary text-center">
+      <p className="text-2xl font-heading text-white text-center">
         The event has begun!
       </p>
     );
@@ -26,15 +26,15 @@ export function CountdownUnit({ targetDate, className }: CountdownUnitProps) {
       aria-label="Countdown timer"
     >
       <CountdownDigit value={days} label="Days" />
-      <span className="text-3xl md:text-5xl font-heading font-bold text-brand-secondary" aria-hidden="true">
+      <span className="text-3xl md:text-5xl font-heading font-bold text-brand-primary/70 drop-shadow-sm" aria-hidden="true">
         :
       </span>
       <CountdownDigit value={hours} label="Hours" />
-      <span className="text-3xl md:text-5xl font-heading font-bold text-brand-secondary" aria-hidden="true">
+      <span className="text-3xl md:text-5xl font-heading font-bold text-brand-primary/70 drop-shadow-sm" aria-hidden="true">
         :
       </span>
       <CountdownDigit value={minutes} label="Minutes" />
-      <span className="text-3xl md:text-5xl font-heading font-bold text-brand-secondary" aria-hidden="true">
+      <span className="text-3xl md:text-5xl font-heading font-bold text-brand-primary/70 drop-shadow-sm" aria-hidden="true">
         :
       </span>
       <CountdownDigit value={seconds} label="Seconds" />
