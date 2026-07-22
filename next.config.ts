@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'incosai2028.id',
       },
+      {
+        protocol: 'https',
+        hostname: 'flagcdn.com',
+      },
     ],
   },
 };

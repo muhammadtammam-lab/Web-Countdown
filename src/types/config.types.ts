@@ -42,6 +42,22 @@ export interface BackgroundImage {
 }
 
 /**
+ * Icon/bendera negara peserta INCOSAI.
+ */
+export interface CountryFlag {
+  /** ID unik untuk key React */
+  id: string;
+  /** Nama negara */
+  name: string;
+  /** Kode negara ISO 3166-1 alpha-2 */
+  code: string;
+  /** URL gambar bendera */
+  flagUrl: string;
+  /** Warna dominan untuk gradient overlay */
+  dominantColor: string;
+}
+
+/**
  * Item logo institusi.
  */
 export interface LogoItem {

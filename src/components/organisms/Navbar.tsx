@@ -2,10 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { navItems } from '@/config/nav.config';
-import { logos } from '@/config/logos.config';
 import { NavLink } from '@/components/molecules/NavLink';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { clsx } from 'clsx';
@@ -29,32 +27,13 @@ export function Navbar() {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-transparent">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo utama - INCOSAI */}
-        <div className="flex-shrink-0">
-          {logos
-            .filter((logo) => logo.id === 'incosai')
-            .map((logo) => (
-              <a
-                key={logo.id}
-                href={logo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Kunjungi ${logo.name}`}
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  className="w-16 md:w-20 object-contain"
-                  sizes="(max-width: 768px) 64px, 80px"
-                />
-              </a>
-            ))}
-        </div>
-
+    <header
+      className={clsx(
+        'fixed top-0 w-full z-50 transition-colors duration-500',
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
+      )}
+    >
+      <nav className="container mx-auto px-4 py-4 flex items-center justify-end">
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
@@ -71,9 +50,9 @@ export function Navbar() {
           aria-controls="mobile-menu"
         >
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6 text-white" />
+            <X className="h-6 w-6 text-brand-primary" />
           ) : (
-            <Menu className="h-6 w-6 text-white" />
+            <Menu className="h-6 w-6 text-brand-primary" />
           )}
         </button>
       </nav>
@@ -87,7 +66,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden bg-black/80 backdrop-blur-md overflow-hidden"
+            className="md:hidden bg-white/95 backdrop-blur-md overflow-hidden shadow-lg"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navItems.map((item) => (
@@ -96,7 +75,7 @@ export function Navbar() {
                   href={item.href}
                   label={item.label}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-2 text-center text-lg"
+                  className="block py-2 text-center text-lg text-brand-primary"
                 />
               ))}
             </div>
